@@ -28,7 +28,7 @@ const BlogSection = () => {
 
     const NextArrow = ({ onClick }) => {
         return (
-            <div className="text-3xl cursor-pointer" onClick={onClick}>
+            <div className="text-xl lg:text-3xl cursor-pointer" onClick={onClick}>
                 <HiArrowNarrowRight />
             </div>
         );
@@ -36,7 +36,7 @@ const BlogSection = () => {
 
     const PrevArrow = ({ onClick }) => {
         return (
-            <div className="text-3xl cursor-pointer" onClick={onClick}>
+            <div className="text-xl lg:text-3xl cursor-pointer" onClick={onClick}>
                 <HiArrowNarrowLeft />
             </div>
         );
@@ -72,10 +72,10 @@ const BlogSection = () => {
     };
 
     return (
-        <div className="py-12 px-4 sm:px-8 lg:px-12 bg-white">
-            <div className="flex justify-between items-center mb-8 px-4 sm:px-8 lg:px-12">
-                <h2 className="text-3xl font-bold">Blogs</h2>
-                <div className="flex space-x-4">
+        <div className="py-12 px-4 lg:px-12 bg-white">
+            <div className="flex justify-between items-center mb-8 sm:px-8 lg:px-12">
+                <h2 className="text-xl font-bold">Blogs</h2>
+                <div className="flex space-x-4 pr-4">
                     <div onClick={() => sliderRef.current.slickPrev()}>
                         <PrevArrow />
                     </div>

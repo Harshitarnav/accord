@@ -27,7 +27,7 @@ const Services = () => {
     ];
 
     return (
-        <div className="flex flex-col lg:flex-row py-12 px-4 sm:px-8 lg:px-32 lg:px-48 lg:h-[700px]">
+        <div className="flex flex-col lg:flex-row py-12 px-4 sm:px-8 lg:px-48 lg:h-[700px]">
             <div className="lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {services.map((service, index) => (
                     <div key={index} className="flex flex-col justify-between w-full h-auto bg-gray-100 rounded-lg shadow-md p-6 relative">
@@ -43,8 +43,8 @@ const Services = () => {
                 ))}
             </div>
             
-            <div className="mt-8 lg:mt-0 lg:ml-16 w-full lg:w-5/12 py-48">
-                <h2 className="text-2xl sm:text-3xl font-bold text-left">Services</h2>
+            <div className="mt-8 lg:mt-0 lg:ml-16 w-full lg:w-5/12 px-1 lg:py-48">
+                <h2 className="text-2xl sm:text-xl font-bold text-left">Services</h2>
                 <p className="mt-4 text-base sm:text-lg font-medium text-gray-500 text-left">
                     jwkedkjwebdiuw kjwbndfkwenbd kjwbdfkwejbf bjfkejwbfniwekb bjiwbfiwejbfniwej 
                     ibjbfikwedfjniwkejd biwuefbiwebfwiek kjwefednb jwndejwe lblwkm, wbuejfbkwejfbw kjbwbf

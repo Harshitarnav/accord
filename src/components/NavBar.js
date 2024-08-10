@@ -15,11 +15,11 @@ function NavBar() {
         <header className="bg-white text-black">
 
             {/* Top bar containing logo and menu items */}
-            <div className="container mx-auto px-4 lg:px-16 py-4 flex flex-col lg:flex-row justify-between items-center">
+            <div className="container mx-auto px-4 lg:px-16 py-4 flex flex-row justify-between items-center">
                 {/* Logo Section */}
-                <div className="flex items-center mb-4 lg:mb-0">
+                <a href="/" className="flex items-center mb-4 lg:mb-0">
                     <p className="text-black text-4xl font-bold">Accorp</p>
-                </div>
+                </a>
 
                 {/* Menu Items */}
                 <nav className="hidden lg:flex">

@@ -7,8 +7,8 @@ function LocationSection() {
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
                 {/* Left Column: Text and List */}
                 <div className="lg:w-1/3 mb-8 lg:mb-0">
-                    <h2 className="text-4xl font-bold mb-4">Lorem ipsum dolor sit amet</h2>
-                    <p className="text-gray-600 mb-6">
+                    <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-left lg:text-center">Lorem ipsum dolor sit amet</h2>
+                    <p className="text-gray-600 mb-6 text-left lg:text-center">
                         Lorem ipsum dolor sit amet consectetur. Id id amet sed magna
                     </p>
                     <ul className="space-y-4 px-6">

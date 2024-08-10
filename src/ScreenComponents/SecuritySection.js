@@ -26,8 +26,8 @@ function SecuritySection() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center">
                     {/* Left Column: Text Content */}
-                    <div className="mb-8 lg:mb-0 text-left px-16">
-                        <h2 className="text-3xl font-bold mb-4">Committed to security</h2>
+                    <div className="mb-8 lg:mb-0 text-left lg:px-16">
+                        <h2 className="text-xl lg:text-3xl font-bold mb-4">Committed to security</h2>
                         <p className="text-gray-600 leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur. Curabitur morbi dolor habitasse aliquet nunc.
                             Amet eu vel aliquet nunc tristique. Aliquam eu sit pellentesque odio ut ut eu quis. Vel.
@@ -45,7 +45,7 @@ function SecuritySection() {
                 </div>
 
                 {/* Feature Boxes */}
-                <div className="flex justify-between p-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16 justify-items-center lg:justify-center lg:py-8 px-4">
                     {options.map((option, index) => (
                         <div key={index} className="flex flex-col items-start max-w-xs text-left">
                             {option.icon}

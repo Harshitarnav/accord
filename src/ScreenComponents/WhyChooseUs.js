@@ -27,8 +27,8 @@ const WhyChooseUs = () => {
 
     return (
         <div className="py-12">
-            <h2 className="text-3xl font-bold mb-8 text-left mx-4 sm:mx-8 lg:mx-48">Why choose us?</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-16 justify-items-center lg:px-48">
+            <h2 className="text-xl font-bold mb-8 text-left mx-4 sm:mx-8 lg:mx-48">Why choose us?</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-16 justify-items-center px-8 lg:px-48">
                 {options.map((option, index) => (
                     <div key={index} className="flex flex-col items-start max-w-xs text-left">
                         {option.icon}

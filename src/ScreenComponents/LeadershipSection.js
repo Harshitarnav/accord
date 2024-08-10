@@ -16,9 +16,9 @@ function LeadershipSection() {
 
     return (
         <section className="bg-white pb-12">
-            <div className="container mx-auto px-4 text-center">
+            <div className="container mx-auto px-4 text-left lg:text-center">
                 <h2 className="text-blue-600 text-sm font-semibold mb-2">Meet Our Team</h2>
-                <h3 className="text-3xl font-bold mb-4">Our Leadership</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4">Our Leadership</h3>
                 <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
                     Our philosophy is simple — hire a team of diverse, passionate people and foster a culture
                     that empowers you to do your best work.

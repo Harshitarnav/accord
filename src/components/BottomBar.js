@@ -72,7 +72,7 @@ function BottomBar() {
                             { country: 'SPAIN', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' },
                             { country: 'INDIA', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' },
                         ].map((location, index) => (
-                            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 mb-4">
+                            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 mb-4 text-left">
                                 <h3 className="font-bold text-lg">{location.country}</h3>
                                 <p className="text-gray-600 text-sm">{location.text}</p>
                             </div>

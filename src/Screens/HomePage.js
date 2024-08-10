@@ -16,12 +16,12 @@ function HomePage() {
         <div className="relative bg-white max-w-full">
             <div className="relative max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h1 className="text-4xl tracking-tight font-semibold text-gray-900 sm:text-5xl md:text-6xl">
+                    <h1 className="text-4xl tracking-tight font-semibold text-gray-900 sm:text-5xl md:text-6xl text-left lg:text-center">
                         Global Expertise, Local Focus
                         <br />
                         Your trusted <span className="text-blue-600 italic">CPA Partner</span>
                     </h1>
-                    <p className="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    <p className="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left lg:text-center">
                         Comprehensive financial services for businesses and individuals <br /> with over <span className="text-blue-600">35 years of global experience.</span>
                     </p>
                 </div>

@@ -6,14 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 const FeedbackSection = () => {
     const feedbacks = [
         {
-            text: "When I was looking for a new way to fund my business, Accorp came highly recommended from my friend. It’s an amazing service that offers funding in variety of different fields. The company is also very transparent and easy to work with.",
-            name: "Chief Executive Officer",
-            company: "Advertising Agency, India"
+            text: "I’ve gone through the process of incorporating in the US and can’t believe how easy and straightforward it was with Accorp. The service is great and I would recommend to anyone.",
+            name: "Co-Founder",
+            company: "Fintech Company, UK"
         },
         {
-            text: "I work in the industry and I use Accorp to audit, review, and compile a lot of the documents we came across. It’s always so helpful having it there for me when I need it. What I like most about it is the timeliness of reports - they’re never late.",
-            name: "Chief Financial Officer",
-            company: "IT Company, US"
+            text: "I’ve gone through the process of incorporating in the US and can’t believe how easy and straightforward it was with Accorp. The service is great and I would recommend to anyone.",
+            name: "Co-Founder",
+            company: "Fintech Company, UK"
         },
         {
             text: "I’ve gone through the process of incorporating in the US and can’t believe how easy and straightforward it was with Accorp. The service is great and I would recommend to anyone.",
@@ -63,7 +63,7 @@ const FeedbackSection = () => {
 
     return (
         <div className="py-12 px-4 sm:px-8 lg:px-12 bg-gray-50">
-            <h2 className="text-3xl font-bold mb-8 text-center">Our happy clients say about us</h2>
+            <h2 className="text-xl font-bold mb-8 text-left">Our happy clients say about us</h2>
             <Slider {...settings}>
                 {feedbacks.map((feedback, index) => (
                     <div key={index} className="p-4">
