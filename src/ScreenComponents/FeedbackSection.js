@@ -63,7 +63,7 @@ const FeedbackSection = () => {
 
     return (
         <div className="py-12 px-4 sm:px-8 lg:px-12 bg-gray-50">
-            <h2 className="text-xl font-bold mb-8 text-left">Our happy clients say about us</h2>
+            <h2 className="text-xl font-bold mb-8 lg:text-center text-left">Our happy clients say about us</h2>
             <Slider {...settings}>
                 {feedbacks.map((feedback, index) => (
                     <div key={index} className="p-4">

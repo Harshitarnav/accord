@@ -73,7 +73,7 @@ const BlogSection = () => {
 
     return (
         <div className="py-12 px-4 lg:px-12 bg-white">
-            <div className="flex justify-between items-center mb-8 sm:px-8 lg:px-12">
+            <div className="flex justify-between items-center mb-8 sm:px-8 lg:px-6">
                 <h2 className="text-xl font-bold">Blogs</h2>
                 <div className="flex space-x-4 pr-4">
                     <div onClick={() => sliderRef.current.slickPrev()}>

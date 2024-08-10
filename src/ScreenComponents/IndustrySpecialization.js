@@ -42,7 +42,7 @@ const IndustrySpecialisation = () => {
 
     return (
         <div className="py-12 px-6 bg-white">
-            <h2 className="text-xl font-bold mb-8 text-left">Our Industry Specialisation</h2>
+            <h2 className="text-xl font-bold mb-8 lg:text-center text-left">Our Industry Specialisation</h2>
             <div className="flex justify-center items-center">
                 {industryData.map((tab, index) => (
                     <div

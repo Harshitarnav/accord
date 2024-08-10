@@ -62,7 +62,7 @@ function BottomBar() {
                 </div>
 
                 {/* Bottom Row */}
-                <div className="border-t border-gray-200 mt-8 pt-8">
+                <div className="border-t border-gray-200 mt-8 pt-8 lg:pl-[375px]">
                     <div className="flex flex-wrap justify-between">
                         {/* Country Sections */}
                         {[
