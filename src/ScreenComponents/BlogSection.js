@@ -8,10 +8,10 @@ const BlogSection = () => {
     const sliderRef = useRef(null);
 
     const blogs = [
-        {
-            year: 2023,
-            title: "Lorem ipsum dolor sit amet consectetur. In.",
-        },
+        // {
+        //     year: 2023,
+        //     title: "Lorem ipsum dolor sit amet consectetur. In.",
+        // },
         {
             year: 2023,
             title: "Lorem ipsum dolor sit amet",
