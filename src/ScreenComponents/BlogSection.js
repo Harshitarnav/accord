@@ -10,10 +10,6 @@ const BlogSection = () => {
     const blogs = [
         {
             year: 2023,
-            title: "Lorem ipsum dolor sit amet consectetur. In.",
-        },
-        {
-            year: 2023,
             title: "Lorem ipsum dolor sit amet",
         },
         {
@@ -45,11 +41,11 @@ const BlogSection = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,                // Increase the transition speed for a smoother effect
         slidesToShow: 3,
         slidesToScroll: 1,
-        // nextArrow: <NextArrow />,  // Use custom next arrow
-        // prevArrow: <PrevArrow />,  // Use custom previous arrow
+        autoplay: true,             
+        autoplaySpeed: 2000,        // Increase the time between slides for a smoother flow
         responsive: [
             {
                 breakpoint: 1024,

@@ -35,11 +35,12 @@ const FeedbackSection = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,                // Transition speed
         slidesToShow: 3,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '0',
+        autoplay: true,             
+        autoplaySpeed: 2000,        // Time between slides
+        pauseOnHover: true,         // Pauses autoplay on hover
         responsive: [
             {
                 breakpoint: 1024,

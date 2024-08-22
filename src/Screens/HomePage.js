@@ -16,7 +16,7 @@ function HomePage() {
         <div className="relative bg-white max-w-full">
             <div className="relative max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h1 className="text-4xl tracking-tight font-semibold text-gray-900 sm:text-5xl md:text-6xl text-left lg:text-center">
+                    <h1 className="text-2xl tracking-tight font-semibold text-gray-900 sm:text-xl md:text-6xl text-left lg:text-center">
                         Global Expertise, Local Focus
                         <br />
                         Your trusted <span className="text-blue-600 italic">CPA Partner</span>
