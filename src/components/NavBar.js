@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ textColor, bordercColor, bgColor }) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -11,9 +13,10 @@ function NavBar() {
         setMenuOpen(false);
     };
 
-    return (
-        <header className="bg-white text-black">
+    const menuItems = ['About Us', 'Services', 'Blog', 'Contact Us'];
 
+    return (
+        <header className={`fixed top-0 left-0 w-full z-50 ${bgColor} ${textColor} ${bordercColor}`}>
             {/* Top bar containing logo and menu items */}
             <div className="container mx-auto px-4 lg:px-16 py-4 flex flex-row justify-between items-center">
                 {/* Logo Section */}
@@ -24,14 +27,21 @@ function NavBar() {
                 {/* Menu Items */}
                 <nav className="hidden lg:flex">
                     <ul className="flex space-x-4">
-                        {['About Us', 'Services', 'Blog', 'Contact Us'].map((item, index) => (
-                            <li key={index}>
-                                <a href={`/${item.toLowerCase().replace(/\s+/g, '')}`}
-                                   className="block py-2 px-4 rounded-md text-black font-semibold hover:text-white hover:bg-gray-800 transition">
-                                    {item}
-                                </a>
-                            </li>
-                        ))}
+                        {menuItems.map((item, index) => {
+                            const path = `/${item.toLowerCase().replace(/\s+/g, '')}`;
+                            const isActive = location.pathname === path;
+
+                            return (
+                                <li key={index}>
+                                    <a href={path}
+                                       className={`block py-2 px-4 rounded-md text-black font-semibold transition ${
+                                           isActive ? 'bg-gray-800 text-white' : 'hover:text-white hover:bg-gray-800'
+                                       }`}>
+                                        {item}
+                                    </a>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </nav>
 
@@ -73,14 +83,21 @@ function NavBar() {
                     </button>
                 </div>
                 <ul className="py-4 space-y-2">
-                    {['About Us', 'Services', 'Blog', 'Contact Us'].map((item, index) => (
-                        <li key={index}>
-                            <a onClick={closeMenu} href={`/${item.toLowerCase().replace(/\s+/g, '')}`}
-                               className="block py-2 px-4 text-white text-center hover:bg-gray-700 transition">
-                                {item}
-                            </a>
-                        </li>
-                    ))}
+                    {menuItems.map((item, index) => {
+                        const path = `/${item.toLowerCase().replace(/\s+/g, '')}`;
+                        const isActive = location.pathname === path;
+
+                        return (
+                            <li key={index}>
+                                <a onClick={closeMenu} href={path}
+                                   className={`block py-2 px-4 text-white text-center transition ${
+                                       isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
+                                   }`}>
+                                    {item}
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
             </nav>
 

@@ -14,12 +14,12 @@ function App() {
     console.log('location', isHomePage);
     return (
 
-        <div className="App">
-            <NavBar textColor={isHomePage ? 'text-white' : 'text-black'}
+        <div className="App pt-16">
+            <NavBar textColor={isHomePage ? 'text-white' : 'text-white'}
                     bordercColor=
-                        {isHomePage ? 'border-white' : 'border-gray-300'}
+                        {isHomePage ? 'border-white' : 'border-white'}
 
-                    bgColor={isHomePage ? 'bg-gray-800' : 'bg-white'
+                    bgColor={isHomePage ? 'bg-white' : 'bg-white'
             } />
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
