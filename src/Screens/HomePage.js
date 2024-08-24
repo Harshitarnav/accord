@@ -9,6 +9,9 @@ import Services from '../ScreenComponents/Services';
 import FeedbackSection from '../ScreenComponents/FeedbackSection';
 import BlogSection from '../ScreenComponents/BlogSection';
 import IndustrySpecialisation from '../ScreenComponents/IndustrySpecialization';
+import soc from '../assets/soc.png';
+import hrt from '../assets/hrt.png';
+import hitrusting from '../assets/hitrustimg.png';
 
 function HomePage() {
 
@@ -19,10 +22,10 @@ function HomePage() {
                     <h1 className="text-2xl tracking-tight font-semibold text-gray-900 sm:text-xl md:text-6xl text-left lg:text-center">
                         Global Expertise, Local Focus
                         <br />
-                        Your trusted <span className="text-blue-600 italic">CPA Partner</span>
+                        Your trusted <span className="text-[#0F52BA] italic">CPA Partner</span>
                     </h1>
                     <p className="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left lg:text-center">
-                        Comprehensive financial services for businesses and individuals <br /> with over <span className="text-blue-600">35 years of global experience.</span>
+                        Comprehensive financial services for businesses and individuals <br /> with over <span className="text-[#0F52BA]">35 years of global experience.</span>
                     </p>
                 </div>
             </div>
@@ -30,16 +33,20 @@ function HomePage() {
             {/* Services Section */}
             <section className="flex flex-wrap justify-center sm:justify-around py-10 px-8 sm:px-12 md:px-24 h-auto">
                 <TransitionButton 
+                    topLogo={soc}
                     heading="SOC"
                     text="Tax planning, preparation, and filing for individuals and businesses."
                     />
                 <TransitionButton 
+                    topLogo={soc}
                     heading="USA INCORPORATION"
                     text="Tax planning, preparation, and filing for individuals and businesses."
                     />
                 <TransitionButton 
+                    topLogo={soc}
                     heading="COMPLIANCES"
                     text="Tax planning, preparation, and filing for individuals and businesses."
+                    logos={[hrt, hitrusting, hrt, hitrusting]}
                     />
             </section>
 
@@ -67,7 +74,7 @@ function HomePage() {
             <BlogSection/>
 
             {/* Subscribe Section */}
-            <section className="flex flex-col sm:flex-row justify-around items-center py-10 px-8 sm:px-16 md:px-48 bg-gray-200 text-center">
+            <section className="flex flex-col sm:flex-row justify-around items-center py-10 px-8 sm:px-16 md:px-48 bg-blue-100 text-center">
                 <h2 className="text-xl sm:text-2xl font-bold mt-2 mb-4 sm:mb-0">SUBSCRIBE TO STAY INFORMED</h2>
                 <div className="flex w-full sm:w-auto justify-center rounded-full border-2 border-black">
                     <input
@@ -75,7 +82,7 @@ function HomePage() {
                         placeholder="Enter your email"
                         className="w-full sm:w-auto px-4 py-2 rounded-l-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded-r-full focus:outline-none focus:ring-2">
+                    <button className="bg-[#0F52BA] text-white px-4 py-2 rounded-r-full focus:outline-none focus:ring-2">
                         Subscribe
                     </button>
                 </div>

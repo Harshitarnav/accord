@@ -1,26 +1,30 @@
 import React from 'react';
 import { FaShieldAlt, FaExchangeAlt, FaBuilding, FaCalculator } from 'react-icons/fa'; // Using react-icons for example
 import { HiArrowRight } from 'react-icons/hi'; // Assuming you want to use a right arrow icon
+import risk from '../assets/HomePage/Risk.png';
+import cross_border from '../assets/HomePage/Cross_Border.png';
+import incorporation from '../assets/HomePage/Incorporation.png';
+import cpa from '../assets/HomePage/CPA.png';
 
 const Services = () => {
     const services = [
         {
-            icon: <FaShieldAlt className="text-blue-500 text-4xl" />,
+            icon: risk,
             title: "Risk Assurance",
             description: "Providing comprehensive risk assessment and management."
         },
         {
-            icon: <FaExchangeAlt className="text-green-500 text-4xl" />,
+            icon: cross_border,
             title: "Cross Border Compliances",
             description: "Ensuring adherence to international compliance standards."
         },
         {
-            icon: <FaBuilding className="text-orange-500 text-4xl" />,
+            icon: incorporation,
             title: "Incorporation",
             description: "Helping you set up and manage your business entities."
         },
         {
-            icon: <FaCalculator className="text-purple-500 text-4xl" />,
+            icon: cpa,
             title: "CPA Services",
             description: "Providing certified professional accounting services."
         }
@@ -30,16 +34,15 @@ const Services = () => {
         <div className="flex flex-col lg:flex-row py-12 px-4 sm:px-8 lg:px-48 lg:h-[700px]">
             <div className="lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {services.map((service, index) => (
-                    <div key={index} className="flex flex-col justify-between w-full h-auto bg-gray-100 rounded-lg shadow-md p-6 relative">
-                        <div className="absolute top-4 right-4">
-                            {service.icon}
-                        </div>
-                        <div className="flex-grow"></div>
-                        <div className="flex justify-between items-center w-full mt-4">
-                            <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
-                            <HiArrowRight className="ml-2 text-lg sm:text-xl" />
-                        </div>
+                    <div key={index} className="flex flex-col justify-between w-full h-[300px] bg-gray-100 rounded-lg shadow-md p-6 relative">
+                    <div className="flex justify-end items-end h-full">
+                        <img src={service.icon} className="w-56 object-contain" alt={service.title} />
                     </div>
+                    <div className="flex justify-between items-center w-full">
+                        <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
+                        <HiArrowRight className="ml-2 text-lg sm:text-xl" />
+                    </div>
+                </div>
                 ))}
             </div>
             
