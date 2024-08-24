@@ -13,7 +13,7 @@ function NavBar({ textColor, bordercColor, bgColor }) {
         setMenuOpen(false);
     };
 
-    const menuItems = ['About Us', 'Services', 'Blog', 'Contact Us'];
+    const menuItems = ['About Us', 'Services', 'Contact Us'];
 
     return (
         <header className={`fixed top-0 left-0 w-full z-50 ${bgColor} ${textColor} ${bordercColor}`}>

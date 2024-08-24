@@ -60,17 +60,17 @@ function ServicesHeader() {
             </div>
 
             {/* Buttons in a Row */}
-            <div className="flex flex-col lg:flex-row gap-x-12 justify-center md:justify-between mt-16 px-4 lg:px-32">
-                <button className="w-full bg-gray-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 mb-4 md:mb-0">
+            {/* <div className="flex flex-col lg:flex-row gap-x-12 justify-center md:justify-between mt-16 px-4 lg:px-32">
+                <button className="w-full bg-[#0F52BA] text-white px-6 py-3 rounded-md hover:bg-blue-700 mb-4 md:mb-0">
                     Chat Now with Us
                 </button>
-                <button className="w-full bg-gray-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 mb-4 md:mb-0">
+                <button className="w-full bg-[#0F52BA] text-white px-6 py-3 rounded-md hover:bg-blue-700 mb-4 md:mb-0">
                     Sample Policies Download
                 </button>
-                <button className="w-full bg-gray-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
+                <button className="w-full bg-[#0F52BA] text-white px-6 py-3 rounded-md hover:bg-blue-700">
                     Book an Expert Appointment
                 </button>
-            </div>
+            </div> */}
         </div>
     );
 }

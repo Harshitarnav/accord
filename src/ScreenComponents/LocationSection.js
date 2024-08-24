@@ -13,32 +13,32 @@ function LocationSection() {
                     </p>
                     <ul className="space-y-4 px-6">
                         <li className="flex items-center text-lg font-semibold">
-                            <div className="w-6 h-6 rounded-full border-2 border-blue-500 flex items-center justify-center mr-3">
-                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <div className="w-6 h-6 rounded-full border-2 border-[#0F52BA] flex items-center justify-center mr-3">
+                                <div className="w-3 h-3 bg-[#0F52BA] rounded-full"></div>
                             </div>
                             USA
                         </li>
                         <li className="flex items-center text-lg font-semibold">
-                            <div className="w-6 h-6 rounded-full border-2 border-blue-500 flex items-center justify-center mr-3">
-                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <div className="w-6 h-6 rounded-full border-2 border-[#0F52BA] flex items-center justify-center mr-3">
+                                <div className="w-3 h-3 bg-[#0F52BA] rounded-full"></div>
                             </div>
                             UK
                         </li>
                         <li className="flex items-center text-lg font-semibold">
-                            <div className="w-6 h-6 rounded-full border-2 border-blue-500 flex items-center justify-center mr-3">
-                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <div className="w-6 h-6 rounded-full border-2 border-[#0F52BA] flex items-center justify-center mr-3">
+                                <div className="w-3 h-3 bg-[#0F52BA] rounded-full"></div>
                             </div>
                             Canada
                         </li>
                         <li className="flex items-center text-lg font-semibold">
-                            <div className="w-6 h-6 rounded-full border-2 border-blue-500 flex items-center justify-center mr-3">
-                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <div className="w-6 h-6 rounded-full border-2 border-[#0F52BA] flex items-center justify-center mr-3">
+                                <div className="w-3 h-3 bg-[#0F52BA] rounded-full"></div>
                             </div>
                             Spain
                         </li>
                         <li className="flex items-center text-lg font-semibold">
-                            <div className="w-6 h-6 rounded-full border-2 border-blue-500 flex items-center justify-center mr-3">
-                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                            <div className="w-6 h-6 rounded-full border-2 border-[#0F52BA] flex items-center justify-center mr-3">
+                                <div className="w-3 h-3 bg-[#0F52BA] rounded-full"></div>
                             </div>
                             India
                         </li>
