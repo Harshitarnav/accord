@@ -38,22 +38,22 @@ const WhyChooseUs = () => {
                 ))}
             </div>
 
-            <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 py-10 px-8 sm:px-16 lg:px-48 bg-gray-200 text-center">
+            <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 py-10 px-8 sm:px-16 lg:px-48 bg-blue-100 text-center">
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">700+</h3>
-                    <p className="text-gray-600">Trusted Clients</p>
+                    <h3 className="text-4xl font-bold text-[#0F52BA]">700+</h3>
+                    <p className="text-black">Trusted Clients</p>
                 </div>
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">7+</h3>
-                    <p className="text-gray-600">Awards</p>
+                    <h3 className="text-4xl font-bold text-[#0F52BA]">7+</h3>
+                    <p className="text-black">Awards</p>
                 </div>
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">34+</h3>
-                    <p className="text-gray-600">Years of Experience</p>
+                    <h3 className="text-4xl font-bold text-[#0F52BA]">34+</h3>
+                    <p className="text-black">Years of Experience</p>
                 </div>
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">115+</h3>
-                    <p className="text-gray-600">Experts</p>
+                    <h3 className="text-4xl font-bold text-[#0F52BA]">115+</h3>
+                    <p className="text-black">Experts</p>
                 </div>
             </section>
         </div>
