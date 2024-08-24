@@ -12,26 +12,30 @@ import IndustrySpecialisation from '../ScreenComponents/IndustrySpecialization';
 import soc from '../assets/soc.png';
 import hrt from '../assets/hrt.png';
 import hitrusting from '../assets/hitrustimg.png';
+import Subscribe from '../ScreenComponents/Subscribe';
+import bg from '../assets/HomePage/bg1.jpg';
 
 function HomePage() {
 
     return (
-        <div className="relative bg-white max-w-full">
-            <div className="relative max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-                <div className="text-center">
-                    <h1 className="text-2xl tracking-tight font-semibold text-gray-900 sm:text-xl md:text-6xl text-left lg:text-center">
+        <div className="relative bg-white max-w-full pt-2 ">
+            <div
+                className="relative w-full max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
+            >
+                <div className="relative text-center">
+                    <h1 className="text-2xl tracking-tight font-semibold text-black sm:text-xl md:text-6xl text-left lg:text-center">
                         Global Expertise, Local Focus
                         <br />
                         Your trusted <span className="text-[#0F52BA] italic">CPA Partner</span>
                     </h1>
-                    <p className="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left lg:text-center">
+                    <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left lg:text-center">
                         Comprehensive financial services for businesses and individuals <br /> with over <span className="text-[#0F52BA]">35 years of global experience.</span>
                     </p>
                 </div>
             </div>
 
             {/* Services Section */}
-            <section className="flex flex-wrap justify-center sm:justify-around py-10 px-8 sm:px-12 md:px-24 h-auto">
+            <section className="hidden lg:flex flex-wrap justify-center sm:justify-around py-10 px-8 sm:px-12 md:px-24 h-auto">
                 <TransitionButton 
                     topLogo={soc}
                     heading="SOC"
@@ -54,7 +58,7 @@ function HomePage() {
             <section className="relative text-center py-10 px-4 sm:px-16">
                 <p className="justify-center pb-8">POWERING THE WORLD'S BEST COMPANIES</p>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 text-2xl font-bold text-gray-600">
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 text-2xl font-bold text-gray-600 lg:ml-4">
                     <p>WEBFLOW</p>
                     <p>ROBINHOOD</p>
                     <p>LOOM</p>
@@ -68,25 +72,10 @@ function HomePage() {
 
             <WhyChooseUs/>
             <Services/>
-            
             <IndustrySpecialisation/>
             <FeedbackSection/>
             <BlogSection/>
-
-            {/* Subscribe Section */}
-            <section className="flex flex-col sm:flex-row justify-around items-center py-10 px-8 sm:px-16 md:px-48 bg-blue-100 text-center">
-                <h2 className="text-xl sm:text-2xl font-bold mt-2 mb-4 sm:mb-0">SUBSCRIBE TO STAY INFORMED</h2>
-                <div className="flex w-full sm:w-auto justify-center rounded-full border-2 border-black">
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="w-full sm:w-auto px-4 py-2 rounded-l-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <button className="bg-[#0F52BA] text-white px-4 py-2 rounded-r-full focus:outline-none focus:ring-2">
-                        Subscribe
-                    </button>
-                </div>
-            </section>
+            <Subscribe/>
         </div>
     );
 }

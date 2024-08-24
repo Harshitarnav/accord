@@ -38,6 +38,9 @@ module.exports = {
       transitionProperty: {
         'width': 'width,height',
       },
+      backgroundImage: {
+        'bg': "url('/src/assets/HomePage/bg1.jpg')",
+      }
     },
   },
   plugins: [],
