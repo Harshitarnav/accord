@@ -6,17 +6,17 @@ import security from '../assets/HomePage/Security.png';
 function SecuritySection() {
     const options = [
         {
-            icon: <FaAward className="text-blue-500 text-3xl" />,
+            icon: <FaAward className="text-[#fc9d32] bg-gray-300 p-2 rounded-2xl text-5xl" />,
             title: "Encryption",
             description: "With over 35 years of expertise, we bring a wealth of global knowledge to every client engagement."
         },
         {
-            icon: <FaGlobe className="text-red-500 text-3xl" />,
+            icon: <FaGlobe className="text-[#ff73f9] bg-gray-300 p-2 rounded-2xl text-5xl" />,
             title: "Privacy",
             description: "We ensure strict adherence to all global standards, keeping your business compliant and secure."
         },
         {
-            icon: <FaCogs className="text-purple-500 text-3xl" />,
+            icon: <FaCogs className="text-blue-400 bg-gray-300 p-2 rounded-2xl text-5xl" />,
             title: "Data Storage",
             description: "Comprehensive services for both individuals and businesses, customized to your unique needs."
         }
