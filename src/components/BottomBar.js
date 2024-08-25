@@ -30,7 +30,6 @@ const pagelinks = [
 ];
 
 function BottomBar() {
-    const logo = require('../assets/images/TrainRex.png');
 
     return (
         <footer className="bg-white">

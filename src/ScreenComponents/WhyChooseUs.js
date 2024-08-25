@@ -4,22 +4,22 @@ import { FaAward, FaGlobe, FaCogs, FaLightbulb } from 'react-icons/fa'; // Assum
 const WhyChooseUs = () => {
     const options = [
         {
-            icon: <FaAward className="text-blue-500 text-3xl" />,
+            icon: <FaAward className="text-black bg-blue-100 p-2 rounded-2xl text-5xl" />,
             title: "Decades of Expertise",
             description: "With over 35 years of expertise, we bring a wealth of global knowledge to every client engagement."
         },
         {
-            icon: <FaGlobe className="text-red-500 text-3xl" />,
+            icon: <FaGlobe className="text-black bg-[#fcd9cf] p-2 rounded-2xl text-5xl" />,
             title: "Global Compliance",
             description: "We ensure strict adherence to all global standards, keeping your business compliant and secure."
         },
         {
-            icon: <FaCogs className="text-purple-500 text-3xl" />,
+            icon: <FaCogs className="text-black bg-[#facffc] p-2 rounded-2xl text-5xl" />,
             title: "Tailored Solutions",
             description: "Comprehensive services for both individuals and businesses, customized to your unique needs."
         },
         {
-            icon: <FaLightbulb className="text-yellow-500 text-3xl" />,
+            icon: <FaLightbulb className="text-black bg-[#fef6ba] #f8bcfc p-2 rounded-2xl text-5xl" />,
             title: "International Insight",
             description: "Navigating cross-border regulations with a global perspective for your success."
         }

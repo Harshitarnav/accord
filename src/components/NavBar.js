@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function NavBar({ textColor, bordercColor, bgColor }) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hasShadow, setHasShadow] = useState(false);
     const location = useLocation();
 
     const toggleMenu = () => {
@@ -15,8 +16,28 @@ function NavBar({ textColor, bordercColor, bgColor }) {
 
     const menuItems = ['About Us', 'Services', 'Contact Us'];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setHasShadow(true);
+            } else {
+                setHasShadow(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 ${bgColor} ${textColor} ${bordercColor}`}>
+        <header
+            className={`fixed top-0 left-0 w-full z-50 ${bgColor} ${textColor} ${bordercColor} ${
+                hasShadow ? 'shadow-lg' : ''
+            } transition-shadow duration-300 ease-in-out`}
+        >
             {/* Top bar containing logo and menu items */}
             <div className="container mx-auto px-4 lg:px-16 py-4 flex flex-row justify-between items-center">
                 {/* Logo Section */}
@@ -35,7 +56,9 @@ function NavBar({ textColor, bordercColor, bgColor }) {
                                 <li key={index}>
                                     <a href={path}
                                        className={`block py-2 px-4 rounded-md text-black font-semibold transition ${
-                                           isActive ? 'bg-gray-800 text-white' : 'hover:text-white hover:bg-gray-800'
+                                           isActive
+                                               ? 'bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 text-white'
+                                               : 'hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-600 hover:to-gray-700 hover:text-white'
                                        }`}>
                                         {item}
                                     </a>
@@ -61,7 +84,8 @@ function NavBar({ textColor, bordercColor, bgColor }) {
 
             {/* Sidebar Menu for mobile screens */}
             <nav
-                className={`lg:hidden fixed top-0 left-0 bg-gray-800 w-64 h-full overflow-y-auto z-50 ${menuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
+                className={`lg:hidden fixed top-0 left-0 bg-gray-800 w-64 h-full overflow-y-auto z-50 ${menuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}
+            >
                 {/* Close Button */}
                 <div className="flex justify-end p-4">
                     <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -91,7 +115,9 @@ function NavBar({ textColor, bordercColor, bgColor }) {
                             <li key={index}>
                                 <a onClick={closeMenu} href={path}
                                    className={`block py-2 px-4 text-white text-center transition ${
-                                       isActive ? 'bg-gray-700' : 'hover:bg-gray-700'
+                                       isActive
+                                           ? 'bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 text-white'
+                                           : 'hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-600 hover:to-gray-700 hover:text-white'
                                    }`}>
                                     {item}
                                 </a>
