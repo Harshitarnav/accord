@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import accorplogo from '../assets/accorplogo.png';
 
 function NavBar({ textColor, bordercColor, bgColor }) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -34,15 +35,15 @@ function NavBar({ textColor, bordercColor, bgColor }) {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 ${bgColor} ${textColor} ${bordercColor} ${
+            className={`fixed top-0 left-0 w-full z-50 pr-4 bg-opacity-0 ${bgColor} ${textColor} ${bordercColor} ${
                 hasShadow ? 'shadow-lg' : ''
             } transition-shadow duration-300 ease-in-out`}
         >
             {/* Top bar containing logo and menu items */}
-            <div className="container mx-auto px-4 lg:px-16 py-4 flex flex-row justify-between items-center">
+            <div className="container mx-auto lg:px-16 flex flex-row justify-between items-center">
                 {/* Logo Section */}
                 <a href="/" className="flex items-center mb-4 lg:mb-0">
-                    <p className="text-black text-4xl font-bold">Accorp</p>
+                    <img src={accorplogo} alt="Logo" className="h-28"/>
                 </a>
 
                 {/* Menu Items */}
@@ -51,15 +52,17 @@ function NavBar({ textColor, bordercColor, bgColor }) {
                         {menuItems.map((item, index) => {
                             const path = `/${item.toLowerCase().replace(/\s+/g, '')}`;
                             const isActive = location.pathname === path;
+                            const isServicesPage = location.pathname === '/services';
 
                             return (
                                 <li key={index}>
                                     <a href={path}
-                                       className={`block py-2 px-4 rounded-md text-black font-semibold transition ${
-                                           isActive
-                                               ? 'bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 text-white'
-                                               : 'hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-600 hover:to-gray-700 hover:text-white'
-                                       }`}>
+                                       className={`block py-2 px-4 rounded-md font-semibold transition ${
+                                        isServicesPage ? 'text-white': 'text-black'
+                                       } ${isActive
+                                        ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white'
+                                        : 'hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white'
+                                        }`}>
                                         {item}
                                     </a>
                                 </li>

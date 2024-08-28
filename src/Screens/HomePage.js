@@ -13,52 +13,67 @@ import soc from '../assets/soc.png';
 import hrt from '../assets/hrt.png';
 import hitrusting from '../assets/hitrustimg.png';
 import Subscribe from '../ScreenComponents/Subscribe';
-import bg from '../assets/HomePage/bg1.jpg';
+import bg from '../assets/bg.png';
 
 function HomePage() {
 
     return (
-        <div className="relative bg-white max-w-full pt-2 ">
+        <div className="relative bg-white max-w-full">
             <div
-                className="relative w-full max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
+                style={{backgroundImage:`url(${bg})`,
+                backgroundSize: 'cover',  // Ensures the background image covers the entire container
+                backgroundPosition: 'center',  // Centers the image in the container
+                backgroundRepeat: 'no-repeat',  // Prevents the image from repeating
+                 }}
             >
-                <div className="relative text-center">
-                    <h1 className="text-2xl tracking-tight font-semibold text-black sm:text-xl md:text-6xl text-left lg:text-center">
-                        Global Expertise, Local Focus
-                        <br />
-                        Your trusted <span className="text-[#0F52BA] italic">CPA Partner</span>
-                    </h1>
-                    <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left lg:text-center">
-                        Comprehensive financial services for businesses and individuals <br /> with over <span className="text-[#0F52BA]">35 years of global experience.</span>
-                    </p>
+                <div
+                    className="relative w-full max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
+                >
+                    <div className="relative text-center lg:pt-24">
+                        <h1 className="text-2xl tracking-tight font-semibold text-black sm:text-xl md:text-6xl text-left lg:text-center">
+                            Global Expertise, Local Focus
+                            <br />
+                            Your trusted <span className="text-[#0F52BA] italic">CPA Partner</span>
+                        </h1>
+                        <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl text-left lg:text-center">
+                            Comprehensive financial services for businesses and individuals <br /> with over <span className="text-[#0F52BA]">35 years of global experience.</span>
+                        </p>
+                    </div>
                 </div>
+
+                {/* Services Section */}
+                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 h-auto">
+                    <TransitionButton 
+                        topLogo={soc}
+                        heading="SOC"
+                        text="Tax planning, preparation, and filing for individuals and businesses."
+                        logos={[soc]}
+                        align='start'
+                    />
+                    <TransitionButton 
+                        topLogo={soc}
+                        heading="USA INCORPORATION"
+                        text="Establish your business in the USA with our comprehensive incorporation services."
+                        logos={[soc]}
+                        align='start'
+                    />
+                    <TransitionButton 
+                        topLogo={soc}
+                        heading="COMPLIANCES"
+                        text="Ensure your business meets all regulatory requirements with our compliance solutions."
+                        logos={[hrt, hitrusting, hrt, hitrusting]}
+                        align='center'
+                    />
+                </section>
             </div>
 
-            {/* Services Section */}
-            <section className="hidden lg:flex flex-wrap justify-center sm:justify-around py-10 px-8 sm:px-12 md:px-24 h-auto">
-                <TransitionButton 
-                    topLogo={soc}
-                    heading="SOC"
-                    text="Tax planning, preparation, and filing for individuals and businesses."
-                    />
-                <TransitionButton 
-                    topLogo={soc}
-                    heading="USA INCORPORATION"
-                    text="Tax planning, preparation, and filing for individuals and businesses."
-                    />
-                <TransitionButton 
-                    topLogo={soc}
-                    heading="COMPLIANCES"
-                    text="Tax planning, preparation, and filing for individuals and businesses."
-                    logos={[hrt, hitrusting, hrt, hitrusting]}
-                    />
-            </section>
+
 
             {/* Powering section */}
-            <section className="relative text-center py-10 px-4 sm:px-16">
+            <section className="relative text-center py-10 px-8 sm:px-16">
                 <p className="justify-center pb-8">POWERING THE WORLD'S BEST COMPANIES</p>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 text-2xl font-bold text-gray-600 lg:ml-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 text-2xl font-bold text-gray-600 lg:mx-10">
                     <p>WEBFLOW</p>
                     <p>ROBINHOOD</p>
                     <p>LOOM</p>

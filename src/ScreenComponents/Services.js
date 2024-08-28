@@ -38,9 +38,9 @@ const Services = () => {
                     <div className="flex justify-end items-end h-full">
                         <img src={service.icon} className="w-56 object-contain" alt={service.title} />
                     </div>
-                    <div className="flex justify-between items-center w-full">
-                        <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
-                        <HiArrowRight className="ml-2 text-lg sm:text-xl" />
+                    <div className="flex justify-between items-left w-full">
+                        <h3 className="text-sm sm:text-xl font-semibold">{service.title}</h3>
+                        <HiArrowRight className="ml-2 text-xl sm:text-sm" />
                     </div>
                 </div>
                 ))}

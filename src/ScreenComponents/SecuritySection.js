@@ -23,8 +23,8 @@ function SecuritySection() {
     ];
 
     return (
-        <section className="bg-white py-12 pb-32 lg:px-52">
-            <div className="flex flex-col lg:flex-row justify-between items-center">
+        <section className="bg-white py-12 pb-32 px-12 lg:px-52">
+            <div className="flex flex-col lg:flex-row justify-between items-center pb-12">
                 {/* Left Column: Text Content */}
                 <div className="text-left lg:w-1/2">
                     <h2 className="text-xl lg:text-3xl font-bold mb-4">Committed to security</h2>
@@ -45,7 +45,7 @@ function SecuritySection() {
             </div>
 
             {/* Feature Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16 justify-items-center lg:justify-center lg:py-8 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16 justify-items-center lg:justify-center lg:py-8">
                 {options.map((option, index) => (
                     <div key={index} className="flex flex-col items-start max-w-xs text-left">
                         {option.icon}

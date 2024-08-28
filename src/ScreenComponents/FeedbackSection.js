@@ -64,7 +64,7 @@ const FeedbackSection = () => {
 
     return (
         <div className="relative">
-            <div className="absolute left-0 top-0 w-4/5 h-full bg-gradient-to-l from-blue-100 via-gray-200 to-white"></div>
+            <div className="absolute left-0 top-0 w-4/5 h-full bg-gradient-to-l from-blue-400 via-gray-300 to-white"></div>
             <div className="relative z-10 py-12 px-4 sm:px-8 lg:px-12">
                 <h2 className="text-xl font-bold mb-8 lg:text-center text-left">Our happy clients say about us</h2>
                 <Slider {...settings}>
