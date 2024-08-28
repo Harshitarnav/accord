@@ -43,7 +43,7 @@ function NavBar({ textColor, bordercColor, bgColor }) {
             <div className="container mx-auto lg:px-16 flex flex-row justify-between items-center">
                 {/* Logo Section */}
                 <a href="/" className="flex items-center mb-4 lg:mb-0">
-                    <img src={accorplogo} alt="Logo" className="h-28"/>
+                    <img src={accorplogo} alt="Logo" className="pt-4 lg:pt-0 h-28"/>
                 </a>
 
                 {/* Menu Items */}

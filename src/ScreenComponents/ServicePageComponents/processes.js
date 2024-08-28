@@ -67,8 +67,10 @@ const ISOCertificationJourneyMenu = () => {
                             <Dropdown title={item.title} content={item.content} />
                         </div>
                         {/* For larger screens, display the content in a box */}
-                        <div className="hidden lg:block h-[300px] border-x-2 border-blue-200xl">
-                            <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-t-2xl py-2">{item.title}</h3>
+                        <div className="hidden lg:block h-fit border-x-2 rounded-2xl border-blue-200xl transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-t-2xl py-2">
+                                {item.title}
+                            </h3>
                             <ul className="list-disc list-inside text-gray-700 text-left border-2 rounded-b-2xl border-blue-500 p-4">
                                 {item.content.map((point, idx) => (
                                     <li key={idx}>{point}</li>

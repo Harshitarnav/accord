@@ -18,7 +18,7 @@ import bg from '../assets/bg.png';
 function HomePage() {
 
     return (
-        <div className="relative bg-white max-w-full">
+        <div className="relative bg-white max-w-full pt-12">
             <div
                 style={{backgroundImage:`url(${bg})`,
                 backgroundSize: 'cover',  // Ensures the background image covers the entire container

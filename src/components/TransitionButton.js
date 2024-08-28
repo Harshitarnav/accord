@@ -3,11 +3,11 @@ import { ReactComponent as ArrowIcon } from '../assets/arrow-right-circle.svg';
 
 const TransitionButton = ({ topLogo, heading, text, logos, align }) => {
     return (
-        <div className="relative flex flex-col w-full h-36 bg-white shadow-lg rounded-2xl p-6 hover:bg-gray-100 transition-all duration-1000 group hover:h-56">
+        <div className="relative flex flex-col w-full h-36 bg-white shadow-lg rounded-2xl p-6 hover:bg-gray-100 transition-all duration-1000 group hover:h-64">
             <div className="relative">
-                <div className="flex flex-col lg:flex-row items-start justify-center lg:justify-start space-y-4 lg:space-y-0 lg:space-x-4">
+                <div className={`flex flex-col lg:flex-row items-start justify-center lg:justify-${align} space-y-4 lg:space-y-0 lg:space-x-4`}>
                     {logos && 
-                        <div className={`flex flex-row items-center lg:justify-${align} space-x-2 lg:space-x-4 transition-opacity duration-500 group-hover:opacity-0`}>
+                        <div className="flex flex-row items-center space-x-2 lg:space-x-4 transition-opacity duration-500 group-hover:opacity-0">
                             {logos.map((logo, index) => (
                                 <img key={index} src={logo} className="w-12 h-12 object-contain" alt={`Logo ${index}`} />
                             ))}
