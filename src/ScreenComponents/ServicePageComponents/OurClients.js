@@ -11,7 +11,7 @@ const ServicePageImages = ({images}) => {
               key={index}
               className={`flex justify-center ${index >2 ? 'lg:col-span-2 lg:row-start-2' : ''}`}
             >
-              <img src={img} alt={`Service ${index + 1}`} className="w-full h-auto w-72 rounded-lg shadow-md" />
+              <img src={img} alt={`Service ${index + 1}`} className="w-full h-auto w-[300px] rounded-lg shadow-md" />
             </div>
           ))}
         </div>

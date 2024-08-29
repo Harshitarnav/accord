@@ -4,7 +4,7 @@ import soc_2 from '../../soc_2.png';
 import soc_3 from '../../soc_3.png';
 import csae from '../../csae.png';
 import soc_cyber from '../../soc_cyber.png';
-import bg1 from '../ISO/iso2.jpg';
+import bg1 from '../hitrust/hitrust.webp';
 import peer_review from '../../peer_review.png';
 import cpa from '../../cpa.jpeg';
 import competitive_costing from '../../competitive_costing.jpeg';

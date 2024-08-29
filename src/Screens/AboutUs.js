@@ -8,7 +8,7 @@ import SecuritySection from '../ScreenComponents/AboutPage/SecuritySection';
 import LeadershipSection from '../ScreenComponents/AboutPage/LeadershipSection';
 import LocationSection from '../ScreenComponents/AboutPage/LocationSection';
 import Subscribe from '../ScreenComponents/Subscribe';
-import bg from '../assets/AboutPage/aboutbg.png'
+import bg from '../assets/AboutPage/bg.png';
 import BottomBar from '../components/BottomBar';
 
 function HomePage() {
@@ -18,21 +18,21 @@ function HomePage() {
 
             <div 
                 className="relative"
-                style={{
-                    backgroundImage: `url(${bg})`,
-                    backgroundSize: 'cover',  // Ensures the background image covers the entire container
-                    backgroundPosition: 'center',  // Centers the image in the container
-                    backgroundRepeat: 'no-repeat',  // Prevents the image from repeating
-                    height: '140vh',  // Set the container height to 100% of the viewport height, adjust as needed
-                }}
+                // style={{
+                //     backgroundImage: `url(${bg})`,
+                //     backgroundSize: 'cover',  // Ensures the background image covers the entire container
+                //     backgroundPosition: 'center',  // Centers the image in the container
+                //     backgroundRepeat: 'no-repeat',  // Prevents the image from repeating
+                //     // height: '180vh',  // Set the container height to 100% of the viewport height, adjust as needed
+                // }}
             >
                 {/* Overlay with opacity */}
-                <div 
+                {/* <div 
                     className="absolute inset-0 bg-white"
                     style={{
                         opacity: 0.9,  // Adjust the opacity value as needed
                     }}
-                />
+                /> */}
                 
                 {/* ServicesHeader should be placed above the overlay */}
                 <div className="relative z-10">
@@ -51,14 +51,15 @@ function HomePage() {
                         </div>
                     </div>
                     <WhyChooseUs/>
-                    <SecuritySection/>
-                    <LeadershipSection/>
-                    <LeadershipSection/>
-                    <LocationSection/>
-                    <Subscribe/>
-                    <BottomBar/>
                 </div>
             </div>
+            
+            <SecuritySection/>
+            <LeadershipSection/>
+            <LeadershipSection/>
+            <LocationSection/>
+            <Subscribe/>
+            <BottomBar/>
         </div>
     );
 }

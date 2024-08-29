@@ -1,4 +1,4 @@
-import bg1 from '../ISO/iso2.jpg';  // Reusing bg1 as the ebook image as well
+import bg1 from '../bgnormal.webp';  // Reusing bg1 as the ebook image as well
 
 const dubaiIncorporation = {
     bg: bg1,

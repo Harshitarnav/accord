@@ -18,7 +18,6 @@ import EbookSection from '../ScreenComponents/ServicePageComponents/Ebook';
 function ServicesPage() {
     const { serviceId } = useParams();
     const serviceData = servicePageData[`${serviceId.toLowerCase()}`];
-    console.log("SERVICE DATA", serviceData)
 
     return (
         <div className="relative bg-white max-w-full">

@@ -4,7 +4,7 @@ function TypeOfSoc({options}) {
 
     return (
         <div className="py-12">
-            <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-left mb-10 px-4 lg:px-48">TYPE OF SOC ASSESSMENT</h2>
+            <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-left mb-10 px-4 lg:px-48">TYPES OF ASSESSMENTS</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16 justify-items-center px-4 lg:px-48">
                 {options.map((option, index) => (
                     <div key={index} className="flex flex-col items-start w-full text-left bg-gray-100 rounded-2xl p-6 shadow-md">

@@ -1,4 +1,4 @@
-import bg1 from '../ISO/iso2.jpg';  // Reusing bg1 as the ebook image as well
+import bg1 from '../audit/audit.jpg';  // Reusing bg1 as the ebook image as well
 
 const auditReviewCompilation = {
     bg: bg1,

@@ -1,4 +1,4 @@
-import bg1 from '../ISO/iso2.jpg';  // Replace with the appropriate background image
+import bg1 from '../gdpr/gdpr.jpg';  // Replace with the appropriate background image
 
 const gdpr = {
     bg: bg1,
