@@ -4,16 +4,17 @@ import '../App.css';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import TransitionButton from '../components/TransitionButton';
-import WhyChooseUs from '../ScreenComponents/WhyChooseUs';
-import Services from '../ScreenComponents/Services';
+import WhyChooseUs from '../ScreenComponents/HomePage/WhyChooseUs';
+import Services from '../ScreenComponents/HomePage/Services';
 import FeedbackSection from '../ScreenComponents/FeedbackSection';
 import BlogSection from '../ScreenComponents/BlogSection';
-import IndustrySpecialisation from '../ScreenComponents/IndustrySpecialization';
+import IndustrySpecialisation from '../ScreenComponents/HomePage/IndustrySpecialization';
 import soc from '../assets/soc.png';
 import hrt from '../assets/hrt.png';
 import hitrusting from '../assets/hitrustimg.png';
 import Subscribe from '../ScreenComponents/Subscribe';
 import bg from '../assets/bg.png';
+import BottomBar from '../components/BottomBar';
 
 function HomePage() {
 
@@ -44,21 +45,21 @@ function HomePage() {
                 {/* Services Section */}
                 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 h-auto">
                     <TransitionButton 
-                        topLogo={soc}
+                        href="soc(ssae18)attestation"
                         heading="SOC"
                         text="Tax planning, preparation, and filing for individuals and businesses."
                         logos={[soc]}
                         align='start'
                     />
                     <TransitionButton 
-                        topLogo={soc}
+                        href="usincorporation"
                         heading="USA INCORPORATION"
                         text="Establish your business in the USA with our comprehensive incorporation services."
                         logos={[soc]}
                         align='start'
                     />
                     <TransitionButton 
-                        topLogo={soc}
+                        href="auditreviewcompilation"
                         heading="COMPLIANCES"
                         text="Ensure your business meets all regulatory requirements with our compliance solutions."
                         logos={[hrt, hitrusting, hrt, hitrusting]}
@@ -91,6 +92,7 @@ function HomePage() {
             <FeedbackSection/>
             <BlogSection/>
             <Subscribe/>
+            <BottomBar/>
         </div>
     );
 }

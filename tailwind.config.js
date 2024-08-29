@@ -45,6 +45,18 @@ module.exports = {
         800: '#3271a5',
         900: '#235284', // Darkest blue
       },
+      yellow: {
+        100: '#fff4d1',
+        200: '#ffe8a3',
+        300: '#ffdb75',
+        400: '#ffd147',
+        500: '#ffc107', // This is the #FFC107 color
+        600: '#e6ac06',
+        700: '#cc9805',
+        800: '#b38404',
+        900: '#996f03',
+      },
+      
     },
     extend: {
       transitionProperty: {

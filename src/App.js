@@ -24,10 +24,9 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/aboutus" element={<AboutUs/>}/>
-                <Route path="/services" element={<Services/>}/>
+                <Route path="/:serviceId" element={<Services />} />
             </Routes>
             {/* <FloatingContactButton /> */}
-            <BottomBar/>
         </div>
 
     );

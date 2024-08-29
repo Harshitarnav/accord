@@ -1,13 +1,17 @@
 import React from 'react';
 import { ReactComponent as ArrowIcon } from '../assets/arrow-right-circle.svg';
 
-const TransitionButton = ({ topLogo, heading, text, logos, align }) => {
+const TransitionButton = ({ href, heading, text, logos, align }) => {
+    // Determine alignment based on the number of logos
+    const logoAlignment = logos && logos.length === 1 ? 'justify-start' : 'justify-center';
+    const logoHoverAlignment = 'justify-start';
+
     return (
-        <div className="relative flex flex-col w-full h-36 bg-white shadow-lg rounded-2xl p-6 hover:bg-gray-100 transition-all duration-1000 group hover:h-64">
+        <a href={`/${href}`} className="relative flex flex-col w-full h-36 bg-white shadow-lg rounded-2xl p-6 hover:bg-gray-100 transition-all duration-700 group hover:h-64">
             <div className="relative">
-                <div className={`flex flex-col lg:flex-row items-start justify-center lg:justify-${align} space-y-4 lg:space-y-0 lg:space-x-4`}>
+                <div className={`flex flex-col lg:flex-row items-start ${logoAlignment} lg:${align} space-y-4 lg:space-y-0 lg:space-x-4 transition-all duration-500 group-hover:${logoHoverAlignment}`}>
                     {logos && 
-                        <div className="flex flex-row items-center space-x-2 lg:space-x-4 transition-opacity duration-500 group-hover:opacity-0">
+                        <div className="flex flex-row items-center space-x-2 lg:space-x-4 transition-all duration-500 group-hover:justify-start">
                             {logos.map((logo, index) => (
                                 <img key={index} src={logo} className="w-12 h-12 object-contain" alt={`Logo ${index}`} />
                             ))}
@@ -15,7 +19,7 @@ const TransitionButton = ({ topLogo, heading, text, logos, align }) => {
                     }
                 </div>
                 
-                <h3 className="ml-4 group-hover:ml-0 text-xl md:text-2xl font-bold transition-all duration-500 ease-in-out group-hover:text-lg group-hover:text-left group-hover:duration-500">
+                <h3 className="ml-4 group-hover:ml-0 text-xl md:text-2xl font-bold transition-all duration-700 ease-in-out group-hover:text-lg group-hover:text-left group-hover:duration-500">
                     {heading}
                 </h3>
 
@@ -25,18 +29,14 @@ const TransitionButton = ({ topLogo, heading, text, logos, align }) => {
                 </p>
 
                 {/* Arrow and View More text */}
-                <span className="flex items-center bottom-4 transform transition-transform duration-500 ease-in-out group-hover:translate-y-2 group-hover:text-[#0F52BA] group-hover:">
+                <span className="flex items-center bottom-4 transform transition-transform duration-700 ease-in-out group-hover:translate-y-2 group-hover:text-[#0F52BA] group-hover:">
                     <ArrowIcon className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
                     <p className="ml-2 opacity-0 group-hover:opacity-100 text-base md:text-lg font-medium transition-opacity duration-500">
                         View More
                     </p>
                 </span>
             </div>
-
-            
-
-            
-        </div>
+        </a>
     );
 };
 

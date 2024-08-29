@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAward, FaGlobe, FaCogs, FaLightbulb } from 'react-icons/fa'; // Assuming you're using react-icons for icons
-import security from '../assets/HomePage/Security.png';
+import security from '../../assets/AboutPage/security.png';
 
 
 function SecuritySection() {
@@ -23,7 +23,7 @@ function SecuritySection() {
     ];
 
     return (
-        <section className="bg-white py-12 pb-32 px-12 lg:px-52">
+        <section className="py-12 pb-32 px-12 lg:px-52">
             <div className="flex flex-col lg:flex-row justify-between items-center pb-12">
                 {/* Left Column: Text Content */}
                 <div className="text-left lg:w-1/2">

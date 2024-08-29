@@ -3,17 +3,13 @@ import React, {useEffect, useState} from 'react';
 import '../App.css';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import TransitionButton from '../components/TransitionButton';
-import WhyChooseUs from '../ScreenComponents/WhyChooseUs';
-import Services from '../ScreenComponents/Services';
-import FeedbackSection from '../ScreenComponents/FeedbackSection';
-import BlogSection from '../ScreenComponents/BlogSection';
-import IndustrySpecialisation from '../ScreenComponents/IndustrySpecialization';
-import SecuritySection from '../ScreenComponents/SecuritySection';
-import LeadershipSection from '../ScreenComponents/LeadershipSection';
-import LocationSection from '../ScreenComponents/LocationSection';
+import WhyChooseUs from '../ScreenComponents/HomePage/WhyChooseUs';
+import SecuritySection from '../ScreenComponents/AboutPage/SecuritySection';
+import LeadershipSection from '../ScreenComponents/AboutPage/LeadershipSection';
+import LocationSection from '../ScreenComponents/AboutPage/LocationSection';
 import Subscribe from '../ScreenComponents/Subscribe';
-import bg from '../assets/accorplogo.png'
+import bg from '../assets/AboutPage/aboutbg.png'
+import BottomBar from '../components/BottomBar';
 
 function HomePage() {
 
@@ -27,13 +23,14 @@ function HomePage() {
                     backgroundSize: 'cover',  // Ensures the background image covers the entire container
                     backgroundPosition: 'center',  // Centers the image in the container
                     backgroundRepeat: 'no-repeat',  // Prevents the image from repeating
+                    height: '140vh',  // Set the container height to 100% of the viewport height, adjust as needed
                 }}
             >
                 {/* Overlay with opacity */}
                 <div 
                     className="absolute inset-0 bg-white"
                     style={{
-                        opacity: 0.8,  // Adjust the opacity value as needed
+                        opacity: 0.9,  // Adjust the opacity value as needed
                     }}
                 />
                 
@@ -54,14 +51,14 @@ function HomePage() {
                         </div>
                     </div>
                     <WhyChooseUs/>
+                    <SecuritySection/>
+                    <LeadershipSection/>
+                    <LeadershipSection/>
+                    <LocationSection/>
+                    <Subscribe/>
+                    <BottomBar/>
                 </div>
             </div>
-            
-            <SecuritySection/>
-            <LeadershipSection/>
-            <LeadershipSection/>
-            <LocationSection/>
-            <Subscribe/>
         </div>
     );
 }

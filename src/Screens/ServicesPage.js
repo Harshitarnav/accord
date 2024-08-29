@@ -10,42 +10,27 @@ import TypeOfSoc from '../ScreenComponents/ServicePageComponents/TypeOfSoc';
 import ServicesHeader from '../ScreenComponents/ServicePageComponents/ServicesHeader';
 import ISOCertificationJourneyMenu from '../ScreenComponents/ServicePageComponents/processes'
 import ServicePageImages from '../ScreenComponents/ServicePageComponents/OurClients';
-import bg from '../assets/ServicePage/iso6.png'
+import BottomBar from '../components/BottomBar';
+import { useParams } from "react-router-dom";
+import { servicePageData } from '../assets/ServicePage/servicePageData';
+import EbookSection from '../ScreenComponents/ServicePageComponents/Ebook';
 
 function ServicesPage() {
+    const { serviceId } = useParams();
+    const serviceData = servicePageData[`${serviceId.toLowerCase()}`];
+    console.log("SERVICE DATA", serviceData)
 
     return (
         <div className="relative bg-white max-w-full">
-            <div 
-                className="relative"
-                style={{
-                    backgroundImage: `url(${bg})`,
-                    backgroundSize: 'cover',  // Ensures the background image covers the entire container
-                    backgroundPosition: 'center',  // Centers the image in the container
-                    backgroundRepeat: 'no-repeat',  // Prevents the image from repeating
-                }}
-            >
-                {/* Overlay with opacity */}
-                <div 
-                    className="absolute inset-0 bg-blue-600"
-                    style={{
-                        opacity: 0.3,  // Adjust the opacity value as needed
-                    }}
-                />
-                
-                {/* ServicesHeader should be placed above the overlay */}
-                <div className="relative z-10">
-                    <ServicesHeader/>
-                </div>
-            </div>
-            <ISOCertificationJourneyMenu/>
-            
-            <TypeOfSoc/>
-
-            <ServicePageImages/>
+            <ServicesHeader bg={serviceData.bg} heading={serviceData.heading} headline={serviceData.headline} features={serviceData.features}/>
+            <ISOCertificationJourneyMenu heading={serviceData.heading} menuItems={serviceData.menuItems}/>
+            {serviceData.ebook && <EbookSection data={serviceData.ebook}/>}
+            {serviceData.options && <TypeOfSoc options={serviceData.options}/>}
+            <ServicePageImages images={serviceData.images}/>
             <FeedbackSection/>
             <BlogSection/>
             <FAQSection/>
+            <BottomBar/>
         </div> 
     );
 }

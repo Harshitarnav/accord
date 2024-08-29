@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
                 ))}
             </div>
 
-            <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 py-10 px-8 sm:px-16 lg:px-48 bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 text-center">
+            <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 py-10 px-8 sm:px-16 lg:px-48 bg-blue-500 text-center">
                 <div>
                     <h3 className="text-4xl font-bold text-white">700+</h3>
                     <p className="text-gray-300">Trusted Clients</p>

@@ -44,7 +44,7 @@ const Dropdown = ({ title, content }) => {
     <div className="relative w-full">
       <button
         onClick={toggleDropdown}
-        className="w-full text-left py-2 px-4 font-bold text-lg text-white bg-blue-700 hover:bg-blue-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="w-full text-left py-2 px-4 font-bold text-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
       >
         {title}
       </button>

@@ -1,135 +1,104 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import accorplogo from '../assets/accorplogo.png';
+import NavItem from './NavbarHelpers/NavItems';
+import MobileMenu from './NavbarHelpers/MobileMenu';
+import ContactButton from "./ContactButton";
 
 function NavBar({ textColor, bordercColor, bgColor }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [hasShadow, setHasShadow] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
     const location = useLocation();
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const closeMenu = () => {
-        setMenuOpen(false);
-    };
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false);
+    const handleServicesHover = () => setServicesOpen(true);
+    const handleServicesLeave = () => setServicesOpen(false);
 
     const menuItems = ['About Us', 'Services', 'Contact Us'];
 
+    const servicesDropdownItems = [
+        {
+            category: 'Risk Assurance',
+            services: [
+                'SOC (SSAE 18) Attestation',
+                'ISO 27001',
+                'HIPAA',
+                'HITRUST Attestation',
+                'GDPR',
+                'PCI-DSS',
+                'VAPT',
+                'CMMI',
+                'FEDRAMP',
+                'AAF 01/20',
+                'SOX'
+            ]
+        },
+        {
+            category: 'Cross Border Compliances',
+            services: ['Transfer Pricing', 'FEMA']
+        },
+        {
+            category: 'Incorporation',
+            services: ['US Incorporation', 'UK Incorporation', 'Dubai Incorporation', 'India Incorporation']
+        },
+        {
+            category: 'CPA Services',
+            services: ['Audit/Review/Compilation', 'US Tax', 'ESOP']
+        }
+    ];
+
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setHasShadow(true);
-            } else {
-                setHasShadow(false);
-            }
-        };
-
+        const handleScroll = () => setHasShadow(window.scrollY > 0);
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 pr-4 bg-opacity-0 ${bgColor} ${textColor} ${bordercColor} ${
-                hasShadow ? 'shadow-lg' : ''
-            } transition-shadow duration-300 ease-in-out`}
+            className={`fixed -top-4 left-0 w-full z-50 pr-4 bg-opacity-100 h-24 ${bgColor} ${textColor} ${bordercColor} ${hasShadow ? 'shadow-lg' : ''} transition-shadow duration-300 ease-in-out`}
         >
-            {/* Top bar containing logo and menu items */}
             <div className="container mx-auto lg:px-16 flex flex-row justify-between items-center">
-                {/* Logo Section */}
-                <a href="/" className="flex items-center mb-4 lg:mb-0">
+                <a href="/" className="flex items-center mb-4 lg:mb-0 -ml-4">
                     <img src={accorplogo} alt="Logo" className="pt-4 lg:pt-0 h-28"/>
                 </a>
 
-                {/* Menu Items */}
                 <nav className="hidden lg:flex">
                     <ul className="flex space-x-4">
                         {menuItems.map((item, index) => {
-                            const path = `/${item.toLowerCase().replace(/\s+/g, '')}`;
-                            const isActive = location.pathname === path;
-                            const isServicesPage = location.pathname === '/services';
-
+                            const isActive = location.pathname === `/${item.toLowerCase().replace(/\s+/g, '')}`;
                             return (
-                                <li key={index}>
-                                    <a href={path}
-                                       className={`block py-2 px-4 rounded-md font-semibold transition ${
-                                        isServicesPage ? 'text-white': 'text-black'
-                                       } ${isActive
-                                        ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white'
-                                        : 'hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 hover:text-white'
-                                        }`}>
-                                        {item}
-                                    </a>
-                                </li>
+                                <NavItem 
+                                    key={index}
+                                    item={item}
+                                    isActive={isActive}
+                                    servicesOpen={servicesOpen}
+                                    handleServicesHover={handleServicesHover}
+                                    handleServicesLeave={handleServicesLeave}
+                                    servicesDropdownItems={servicesDropdownItems}
+                                />
                             );
                         })}
                     </ul>
+                    <ContactButton/>
                 </nav>
 
-                {/* Hamburger Icon for mobile screens */}
                 <div className="lg:hidden">
                     <button onClick={toggleMenu} className="text-black focus:outline-none">
                         <svg className="h-6 w-6" viewBox="0 0 24 24">
-                            <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
-                            />
+                            <path fillRule="evenodd" clipRule="evenodd" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
                         </svg>
                     </button>
                 </div>
             </div>
 
-            {/* Sidebar Menu for mobile screens */}
-            <nav
-                className={`lg:hidden fixed top-0 left-0 bg-gray-800 w-64 h-full overflow-y-auto z-50 ${menuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}
-            >
-                {/* Close Button */}
-                <div className="flex justify-end p-4">
-                    <button onClick={toggleMenu} className="text-white focus:outline-none">
-                        <svg
-                            viewBox="0 0 512 512"
-                            fill="currentColor"
-                            height="1em"
-                            width="1em"
-                        >
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={32}
-                                d="M368 368L144 144M368 144L144 368"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <ul className="py-4 space-y-2">
-                    {menuItems.map((item, index) => {
-                        const path = `/${item.toLowerCase().replace(/\s+/g, '')}`;
-                        const isActive = location.pathname === path;
-
-                        return (
-                            <li key={index}>
-                                <a onClick={closeMenu} href={path}
-                                   className={`block py-2 px-4 text-white text-center transition ${
-                                       isActive
-                                           ? 'bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 text-white'
-                                           : 'hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-600 hover:to-gray-700 hover:text-white'
-                                   }`}>
-                                    {item}
-                                </a>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </nav>
-
+            <MobileMenu
+                menuOpen={menuOpen}
+                toggleMenu={toggleMenu}
+                menuItems={menuItems}
+                closeMenu={closeMenu}
+            />
         </header>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import world_map from '../assets/world_map_PNG28.png'
+import world_map from '../../assets/world_map_PNG28.png'
 
 function LocationSection() {
     return (
