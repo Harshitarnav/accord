@@ -14,7 +14,7 @@ function App() {
     console.log('location', isHomePage);
     return (
 
-        <div className="App pt-16">
+        <div className="App">
             <NavBar textColor={isHomePage ? 'text-white' : 'text-white'}
                     bordercColor=
                         {isHomePage ? 'border-white' : 'border-white'}
@@ -24,10 +24,9 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/aboutus" element={<AboutUs/>}/>
-                <Route path="/services" element={<Services/>}/>
+                <Route path="/:serviceId" element={<Services />} />
             </Routes>
             {/* <FloatingContactButton /> */}
-            <BottomBar/>
         </div>
 
     );

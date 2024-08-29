@@ -15,3 +15,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #376dc3; /* Customize the color */
+  padding-top: 4px;
+}

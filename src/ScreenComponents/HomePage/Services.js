@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaShieldAlt, FaExchangeAlt, FaBuilding, FaCalculator } from 'react-icons/fa'; // Using react-icons for example
 import { HiArrowRight } from 'react-icons/hi'; // Assuming you want to use a right arrow icon
-import risk from '../assets/HomePage/Risk.png';
-import cross_border from '../assets/HomePage/Cross_Border.png';
-import incorporation from '../assets/HomePage/Incorporation.png';
-import cpa from '../assets/HomePage/CPA.png';
+import risk from '../../assets/HomePage/Risk.png';
+import cross_border from '../../assets/HomePage/Cross_Border.png';
+import incorporation from '../../assets/HomePage/Incorporation.png';
+import cpa from '../../assets/HomePage/CPA.png';
 
 const Services = () => {
     const services = [
@@ -38,9 +38,9 @@ const Services = () => {
                     <div className="flex justify-end items-end h-full">
                         <img src={service.icon} className="w-56 object-contain" alt={service.title} />
                     </div>
-                    <div className="flex justify-between items-center w-full">
-                        <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
-                        <HiArrowRight className="ml-2 text-lg sm:text-xl" />
+                    <div className="flex justify-between items-left w-full">
+                        <h3 className="text-sm sm:text-xl font-semibold">{service.title}</h3>
+                        <HiArrowRight className="ml-2 text-xl sm:text-sm" />
                     </div>
                 </div>
                 ))}

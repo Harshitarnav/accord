@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subscribe = () => {
     return (
-        <section className="flex flex-col sm:flex-row justify-around items-center py-10 px-8 sm:px-16 md:px-48 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100 text-center rounded-lg shadow-lg">
+        <section className="flex flex-col sm:flex-row justify-around items-center py-10 px-8 sm:px-16 md:px-48 bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 text-center shadow-lg">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-0">Subscribe to Stay Informed</h2>
             <div className="flex w-full sm:w-auto justify-center rounded-full overflow-hidden border-2 border-white shadow-md">
                 <input

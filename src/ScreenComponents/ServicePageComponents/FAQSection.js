@@ -35,8 +35,8 @@ function FAQSection() {
     ];
 
     return (
-        <div className="bg-gray-200 py-12 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-10">FREQUENTLY ASKED QUESTIONS</h2>
+        <div className="bg-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-center mb-10">FREQUENTLY ASKED QUESTIONS</h2>
             <div className="max-w-4xl mx-auto space-y-4">
                 {faqs.map((faq, index) => (
                     <div key={index} className="bg-white shadow-md rounded-lg">
