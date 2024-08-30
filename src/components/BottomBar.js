@@ -13,13 +13,13 @@ const data = [
     {
         category: "RISK ASSURANCE",
         items: [
-            { title: "SOC (SSAE 18) Attestation", link: "/soc-ssae-18-attestation" },
-            { title: "ISO 27001", link: "/iso-27001" },
+            { title: "SOC (SSAE 18) Attestation", link: "/soc(ssae18)attestation" },
+            { title: "ISO 27001", link: "/iso27001" },
             { title: "HIPAA", link: "/hipaa" },
-            { title: "HITRUST Attestation", link: "/hitrust-attestation" },
+            { title: "HITRUST Attestation", link: "/hitrustattestation" },
             { title: "GDPR", link: "/gdpr" },
-            { title: "AAF 01/20", link: "/aaf-01-20" },
-            { title: "PCI-DSS", link: "/pci-dss" },
+            { title: "AAF 01/20", link: "/aaf0120" },
+            { title: "PCI-DSS", link: "/pcidss" },
             { title: "VAPT", link: "/vapt" },
             { title: "CMMI", link: "/cmmi" },
             { title: "fedRAMP", link: "/fedramp" }
@@ -28,25 +28,25 @@ const data = [
     {
         category: "CROSS BORDER COMPLIANCES",
         items: [
-            { title: "Transfer Pricing", link: "/transfer-pricing" },
+            { title: "Transfer Pricing", link: "/transferpricing" },
             { title: "FEMA", link: "/fema" }
         ]
     },
     {
         category: "CPA SERVICES",
         items: [
-            { title: "Audit/Review/Compilation", link: "/audit-review-compilation" },
-            { title: "US Tax/International Taxation", link: "/us-tax-international-taxation" },
+            { title: "Audit/Review/Compilation", link: "/auditreviewcompilation" },
+            { title: "US Tax/International Taxation", link: "/ustax" },
             { title: "ESOP", link: "/esop" }
         ]
     },
     {
         category: "Incorporation",
         items: [
-            { title: "US Incorporation", link: "/us-incorporation" },
-            { title: "UK Incorporation", link: "/uk-incorporation" },
-            { title: "Dubai Incorporation", link: "/dubai-incorporation" },
-            { title: "Entry India", link: "/entry-india" }
+            { title: "US Incorporation", link: "/usincorporation" },
+            { title: "UK Incorporation", link: "/ukincorporation" },
+            { title: "Dubai Incorporation", link: "/dubaiincorporation" },
+            { title: "Entry India", link: "/indiaincorporation" }
         ]
     }
 ]
