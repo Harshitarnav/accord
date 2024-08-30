@@ -64,6 +64,10 @@ module.exports = {
       },
       backgroundImage: {
         'bg': "url('/src/assets/HomePage/bg1.jpg')",
+      },
+      transitionDuration: {
+        '3000': '3000ms',
+        '5000': '4000ms',
       }
     },
   },

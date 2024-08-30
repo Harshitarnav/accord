@@ -8,7 +8,7 @@ function TypeOfSoc({options}) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16 justify-items-center px-4 lg:px-48">
                 {options.map((option, index) => (
                     <div key={index} className="flex flex-col items-start w-full text-left bg-gray-100 rounded-2xl p-6 shadow-md">
-                        <img src={option.image} alt={option.title} className="text-blue-500 text-3xl mb-4"/>
+                        {option.images && <img src={option.images} alt={option.title} className="text-blue-500 text-3xl mb-4"/>}
                         <h3 className="text-xl font-semibold">{option.title}</h3>
                         <p className="mt-2 text-gray-600">{option.description}</p>
                     </div>

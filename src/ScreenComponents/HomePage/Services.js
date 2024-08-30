@@ -33,17 +33,17 @@ const Services = () => {
     return (
         <div className="flex flex-col lg:flex-row py-12 px-4 sm:px-8 lg:px-48 lg:h-[700px]">
             <div className="lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {services.map((service, index) => (
-                    <div key={index} className="flex flex-col justify-between w-full h-[300px] bg-gray-100 rounded-lg shadow-md p-6 relative">
+            {services.map((service, index) => (
+                <div key={index} className="flex flex-col justify-between w-full h-[300px] bg-gray-100 rounded-lg shadow-md p-6 relative">
                     <div className="flex justify-end items-end h-full">
                         <img src={service.icon} className="w-56 object-contain" alt={service.title} />
                     </div>
-                    <div className="flex items-end w-full">
+                    <div className="flex items-end w-full justify-end"> {/* Added justify-end to align title to the right */}
                         <h3 className="text-sm sm:text-xl font-semibold text-right">{service.title}</h3>
                         {/* <HiArrowRight className="ml-2 text-xl sm:text-sm" /> */}
                     </div>
                 </div>
-                ))}
+            ))}
             </div>
             
             <div className="mt-8 lg:mt-0 lg:ml-16 w-full lg:w-5/12 px-1 lg:py-48">

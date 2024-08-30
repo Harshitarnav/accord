@@ -59,7 +59,7 @@ function NavBar({ textColor, bordercColor, bgColor }) {
         <header
             className={`fixed -top-4 left-0 w-full z-50 pr-4 bg-opacity-100 h-24 ${bgColor} ${textColor} ${bordercColor} ${hasShadow ? 'shadow-lg' : ''} transition-shadow duration-300 ease-in-out`}
         >
-            <div className="container mx-auto lg:px-16 flex flex-row justify-between items-center">
+            <div className="container mx-auto px-4 lg:px-16 flex flex-row justify-between items-center">
                 <a href="/" className="flex items-center mb-4 lg:mb-0 -ml-4">
                     <img src={accorplogo} alt="Logo" className="pt-4 lg:pt-0 h-28"/>
                 </a>
@@ -96,7 +96,7 @@ function NavBar({ textColor, bordercColor, bgColor }) {
             <MobileMenu
                 menuOpen={menuOpen}
                 toggleMenu={toggleMenu}
-                menuItems={menuItems}
+                servicesDropdownItems={servicesDropdownItems}
                 closeMenu={closeMenu}
             />
         </header>

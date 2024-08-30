@@ -21,7 +21,7 @@ function ServicesHeader({bg, heading, headline, features}) {
             
             {/* ServicesHeader should be placed above the overlay */}
             <div className="relative z-10">
-                <div className="relative max-w-7xl mx-auto py-48 px-4" >
+                <div className="relative max-w-7xl mx-auto py-24 lg:py-48 px-4" >
                     <div className="text-center pt-16">
                         <h1 className="text-3xl lg:text-5xl tracking-tight font-extrabold sm:text-5xl md:text-6xl text-left lg:text-center text-white">
                             {heading}
@@ -35,19 +35,18 @@ function ServicesHeader({bg, heading, headline, features}) {
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap text-2xl font-bold text-white mt-10 justify-center">
+                    <div className="flex flex-wrap text-2xl font-bold text-blue-400 mt-10 lg:justify-center">
                         {features.map((feature, index) => (
-                            <div 
-                                key={index} 
-                                className={`w-full sm:w-1/2 lg:w-1/3 py-2 text-center flex flex-row ${index > 2 ? 'lg:justify-center' : ''}`}
-                            >
-                                {/* <div className="flex justify-center">
-                                    {feature.images.map((image, imgIndex) => (
-                                        <img key={imgIndex} src={image} alt={feature.name} className="h-14" />
-                                    ))}
-                                </div> */}
-                                <p className="items-center text-left px-4 text-[16px]">{feature.name}</p>
+                        <div 
+                            key={index} 
+                            className={`w-fit py-2 text-center flex flex-row items-center bg-white px-2 lg:px-4 rounded-2xl my-2 lg:mx-4`}
+                        >
+                            <div className="flex items-center">
+                                <div className="w-3 lg:w-5 h-3 lg:h-5 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 mr-2 border-2 lg:border-4 border-blue-100"></div>
+                                <p className="text-left text-[16px]">{feature.name}</p>
                             </div>
+                        </div>
+                        
                         ))}
                     </div>
 

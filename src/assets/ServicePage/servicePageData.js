@@ -1,24 +1,24 @@
 // servicePageData.js
-import iso27001 from './servicePageList/iso27001';
-import soc from './servicePageList/soc';
-import hipaa from './servicePageList/hipaa'
-import hitrustattestation from './servicePageList/hitrustattestation';
-import gdpr from './servicePageList/gdpr';
-import pciDss from './servicePageList/pciDss';
-import vapt from './servicePageList/vapt';
-import cmmi from './servicePageList/cmmi';
-import fedramp from './servicePageList/fedramp';
-import aaf0120 from './servicePageList/aaf0120';
-import marSoxCompliance from './servicePageList/marSoxCompliance';
-import transferPricing from './servicePageList/transferPricing';
-import fema from './servicePageList/fema';
-import usaIncorporation from './servicePageList/usaIncorporation';
-import ukIncorporation from './servicePageList/ukIncorporation';
-import dubaiIncorporation from './servicePageList/dubaiIncorporation';
-import indiaIncorporation from './servicePageList/IndiaIncorporation';
-import auditReviewCompilation from './servicePageList/auditReviewCompilation';
-import usTaxation from './servicePageList/usTaxation';
-import esop from './servicePageList/esop';
+import iso27001 from './ISO/iso27001';
+import soc from './soc/soc';
+import hipaa from './hipaa/hipaa'
+import hitrustattestation from './hitrust/hitrustattestation';
+import gdpr from './gdpr/gdpr';
+import pciDss from './pcidss/pciDss';
+import vapt from './vapt/vapt';
+import cmmi from './cmmi/cmmi';
+import fedramp from './fedramp/fedramp';
+import aaf0120 from './aaf0120/aaf0120';
+import marSoxCompliance from './sox/marSoxCompliance';
+import transferPricing from './transferpricing/transferPricing';
+import fema from './fema/fema';
+import usaIncorporation from './usaincorporation/usaIncorporation';
+import ukIncorporation from './ukIncorporation/ukIncorporation';
+import dubaiIncorporation from './dubaiIncorporation/dubaiIncorporation';
+import indiaIncorporation from './IndiaIncorporation/IndiaIncorporation';
+import auditReviewCompilation from './audit/auditReviewCompilation';
+import usTaxation from './ustaxation/usTaxation';
+import esop from './esop/esop';
 
 export const servicePageData = {
   "iso27001": iso27001,
